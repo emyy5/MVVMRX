@@ -13,6 +13,11 @@
 		91B870652AC64B9A0075110B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B870632AC64B9A0075110B /* Main.storyboard */; };
 		91B870672AC64B9D0075110B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B870662AC64B9D0075110B /* Assets.xcassets */; };
 		91B8706A2AC64B9D0075110B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B870682AC64B9D0075110B /* LaunchScreen.storyboard */; };
+		91B870722AC64CB50075110B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B870712AC64CB50075110B /* Model.swift */; };
+		91B870752AC64CF60075110B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 91B870742AC64CF60075110B /* RxCocoa */; };
+		91B870772AC64CF60075110B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91B870762AC64CF60075110B /* RxSwift */; };
+		91B870792AC64D490075110B /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B870782AC64D490075110B /* UserListViewModel.swift */; };
+		91B8707B2AC64D730075110B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B8707A2AC64D730075110B /* UserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		91B870662AC64B9D0075110B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91B870692AC64B9D0075110B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91B8706B2AC64B9D0075110B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91B870712AC64CB50075110B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		91B870782AC64D490075110B /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		91B8707A2AC64D730075110B /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B870772AC64CF60075110B /* RxSwift in Frameworks */,
+				91B870752AC64CF60075110B /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,9 @@
 				91B870662AC64B9D0075110B /* Assets.xcassets */,
 				91B870682AC64B9D0075110B /* LaunchScreen.storyboard */,
 				91B8706B2AC64B9D0075110B /* Info.plist */,
+				91B870712AC64CB50075110B /* Model.swift */,
+				91B870782AC64D490075110B /* UserListViewModel.swift */,
+				91B8707A2AC64D730075110B /* UserTableViewCell.swift */,
 			);
 			path = MVVMWithRX;
 			sourceTree = "<group>";
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = MVVMWithRX;
+			packageProductDependencies = (
+				91B870742AC64CF60075110B /* RxCocoa */,
+				91B870762AC64CF60075110B /* RxSwift */,
+			);
 			productName = MVVMWithRX;
 			productReference = 91B8705A2AC64B9A0075110B /* MVVMWithRX.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 91B870512AC64B9A0075110B;
+			packageReferences = (
+				91B870732AC64CF60075110B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 91B8705B2AC64B9A0075110B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +161,9 @@
 				91B870622AC64B9A0075110B /* ViewController.swift in Sources */,
 				91B8705E2AC64B9A0075110B /* AppDelegate.swift in Sources */,
 				91B870602AC64B9A0075110B /* SceneDelegate.swift in Sources */,
+				91B870722AC64CB50075110B /* Model.swift in Sources */,
+				91B8707B2AC64D730075110B /* UserTableViewCell.swift in Sources */,
+				91B870792AC64D490075110B /* UserListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +379,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91B870732AC64CF60075110B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91B870742AC64CF60075110B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91B870732AC64CF60075110B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		91B870762AC64CF60075110B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91B870732AC64CF60075110B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91B870522AC64B9A0075110B /* Project object */;
 }
